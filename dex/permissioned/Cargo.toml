@@ -7,4 +7,5 @@ edition = "2018"
 anchor-lang = "0.31.0"
 anchor-spl = { version = "0.31.0", features = ["token"] }
 serum_dex = { path = "../", features = ["no-entrypoint"] }
-spl-token = { version = "=7.0.0", default-features = false, features = ["no-entrypoint"] }
+spl-token = { version = "=8.0.0", default-features = false, features = ["no-entrypoint"] }
+spl-associated-token-account = { version = "7.0.0", features = ["no-entrypoint"] }
