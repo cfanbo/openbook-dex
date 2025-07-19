@@ -141,9 +141,9 @@ impl MarketMiddleware for OpenOrdersPda {
         let market = &ctx.accounts[4];
         let user = &ctx.accounts[3];
 
-        // Initialize PDA. (skipped migration)
-        // let mut accounts = &ctx.accounts[..];
-        // <InitAccount as Accounts<'_, _>>::try_accounts(ctx.program_id, &mut accounts, &[self.bump, self.bump_init])?;
+        // Initialize PDA.
+        let mut accounts = &ctx.accounts[..];
+        <InitAccount as Accounts<'_, _>>::try_accounts(ctx.program_id, &mut accounts, &[self.bump, self.bump_init])?;
 
         // Add signer to context.
         ctx.seeds.push(open_orders_authority! {
