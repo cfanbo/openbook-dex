@@ -57,6 +57,8 @@ use serum_dex::state::Request;
 use serum_dex::state::RequestQueueHeader;
 use serum_dex::state::{AccountFlag, Market, MarketState, MarketStateV2};
 
+// The `token_instruction` module provides utility functions and abstractions
+// for working with token-related instructions in the Solana blockchain.
 mod token_instruction;
 
 pub fn with_logging<F: FnOnce()>(_to: &str, fnc: F) {
