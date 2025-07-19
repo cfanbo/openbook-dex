@@ -1,5 +1,5 @@
 #![cfg_attr(not(feature = "program"), allow(unused))]
-#![allow(dead_code, unused_variables, unused_imports, unused_mut)]
+#![allow(clippy::too_many_arguments)]
 
 use num_enum::TryFromPrimitive;
 use std::{

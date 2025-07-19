@@ -218,7 +218,7 @@ pub const PC_DUST_THRESHOLD: u64 = 500;
 
 pub fn setup_market(bump: &Bump, is_permissioned: bool) -> MarketAccounts {
     let rent = Rent::default();
-    let rent_sysvar = new_rent_sysvar_account(100000, rent.clone(), bump);
+    let rent_sysvar = new_rent_sysvar_account(100000, rent, bump);
 
     let program_id = random_pubkey(bump);
     let market = new_dex_owned_account(

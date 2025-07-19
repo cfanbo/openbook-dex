@@ -1,5 +1,5 @@
-#![allow(warnings)]
 #![cfg_attr(not(feature = "program"), allow(unused))]
+#![allow(clippy::too_many_arguments)]
 use crate::error::DexError;
 use crate::matching::{OrderType, Side};
 use bytemuck::cast;

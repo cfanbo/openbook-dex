@@ -57,7 +57,6 @@ use serum_dex::state::Request;
 use serum_dex::state::RequestQueueHeader;
 use serum_dex::state::{AccountFlag, Market, MarketState, MarketStateV2};
 
-// Include local token_instruction module
 mod token_instruction;
 
 pub fn with_logging<F: FnOnce()>(_to: &str, fnc: F) {
