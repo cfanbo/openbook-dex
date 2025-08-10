@@ -9,3 +9,6 @@ members = [
 exclude = [
     "dex",
 ]
+
+[profile.release]
+overflow-checks = true

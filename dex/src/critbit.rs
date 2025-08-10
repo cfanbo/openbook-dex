@@ -930,7 +930,7 @@ mod tests {
 
     #[test]
     fn simulate_operations() {
-        use rand::distr::weighted::WeightedIndex;
+        use rand::distributions::WeightedIndex;
         use std::collections::BTreeMap;
 
         let mut aligned_buf = vec![0u64; 1_250_000];

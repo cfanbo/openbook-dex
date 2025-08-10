@@ -26,12 +26,14 @@ use crate::error::DexErrorCode;
 
 use super::*;
 
+fn random_u64_array() -> [u8; 32] {
+    transmute_to_bytes(&rand::random::<[u64; 4]>())
+        .try_into()
+        .unwrap()
+}
+
 fn random_pubkey<'bump, G: rand::Rng>(_rng: &mut G, bump: &'bump Bump) -> &'bump Pubkey {
-    bump.alloc(Pubkey::new_from_array(
-        transmute_to_bytes(&rand::random::<[u64; 4]>() )
-            .try_into()
-            .unwrap(),
-    ))
+    bump.alloc(Pubkey::new_from_array(random_u64_array()))
 }
 
 struct MarketAccounts<'bump> {
